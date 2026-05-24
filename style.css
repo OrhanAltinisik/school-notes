@@ -1,0 +1,254 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Colorful dynamic gradient background */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Glassmorphism Effect --- */
+.glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* --- Headers --- */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(0,0,0,0.4);
+}
+
+/* --- Main Page Info Card --- */
+.info-card {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.info-card h2 {
+    color: #d81b60;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #d81b60;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+/* --- Subject Grid (Main Page) --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.subject-card {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.subject-card h3 {
+    font-size: 1.8rem;
+    color: #4a148c;
+}
+
+/* --- Subject Pages Layout --- */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content-card {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-card h3 {
+    margin-bottom: 15px;
+    color: #4a148c;
+}
+
+.responsive-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pdf-placeholder {
+    width: 100%;
+    height: 200px;
+    background: rgba(0,0,0,0.05);
+    border: 2px dashed #4a148c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+/* --- Interactive Notes Section --- */
+.notes-section {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-section h2 {
+    color: #d81b60;
+    margin-bottom: 15px;
+}
+
+.note-input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    resize: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #d81b60;
+}
+
+button {
+    background: #d81b60;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ad144d;
+}
+
+.notes-list {
+    list-style: none;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.notes-list li {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    border-left: 5px solid #d81b60;
+    white-space: pre-wrap; /* Keeps formatting of notes */
+}
+
+.delete-btn {
+    background: transparent;
+    color: #999;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.delete-btn:hover {
+    background: #ffebee;
+    color: #d32f2f;
+}

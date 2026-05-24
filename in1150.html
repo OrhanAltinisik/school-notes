@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN1150 - Study Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-subject="IN1150"> 
+    <header class="main-header">
+        <a href="index.html" class="back-btn">← Back Home</a>
+        <h1>IN1150</h1>
+        <p>Logiske metoder</p>
+    </header>
+
+    <div class="container layout-grid">
+        <div class="materials-section">
+            <div class="glass content-card">
+                <h3>Logic Truth Tables</h3>
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" alt="Math/Logic" class="responsive-img">
+            </div>
+            
+            <div class="glass content-card">
+                <h3>Exam 2024 (PDF)</h3>
+                <!-- Real PDF embedded here -->
+                <embed src="in1150/eksamen_in1150_2024h_bokmaal.pdf" type="application/pdf" width="100%" height="400px" style="border-radius: 10px; border: 2px solid #4a148c;" />
+                <embed src="in1150\729034135-Roger-Antonsen-Logical-Methods-the-Art-of-Thinking-Abstractly-and-Mathematically-Springer-2021.pdf" type="application/pdf" width="100%" height="400px" style="border-radius: 10px; border: 2px solid #4a148c;" />
+            </div>
+        </div>
+
+        <div class="notes-section glass">
+            <h2>My Notes</h2>
+            <div class="note-input-area">
+                <textarea id="noteInput" placeholder="Write a new note here (e.g. Set theory formulas...)"></textarea>
+                <button id="addNoteBtn">Add Note</button>
+            </div>
+            <ul id="notesList" class="notes-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

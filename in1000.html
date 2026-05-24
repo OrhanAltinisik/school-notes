@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN1000 - Study Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-subject="IN1000"> 
+    <header class="main-header">
+        <a href="index.html" class="back-btn">← Back Home</a>
+        <h1>IN1000</h1>
+        <p>Introduksjon til objektorientert programmering</p>
+    </header>
+
+    <div class="container layout-grid">
+        <!-- Left Column: Materials (PDFs, Images) -->
+        <div class="materials-section">
+            <div class="glass content-card">
+                <h3>Subject Image</h3>
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Code" class="responsive-img">
+            </div>
+            
+            <div class="glass content-card">
+                <h3>Syllabus / Exam (PDF)</h3>
+                <!-- Real PDF embedded here -->
+                <embed src="in1150/eksamen_in1150_2024h_bokmaal.pdf" type="application/pdf" width="100%" height="400px" style="border-radius: 10px; border: 2px solid #4a148c;" />
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Notes -->
+        <div class="notes-section glass">
+            <h2>My Notes</h2>
+            <div class="note-input-area">
+                <textarea id="noteInput" placeholder="Write a new note here..."></textarea>
+                <button id="addNoteBtn">Add Note</button>
+            </div>
+            <ul id="notesList" class="notes-list">
+                <!-- Notes will be injected here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
